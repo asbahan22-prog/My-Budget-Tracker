@@ -1,202 +1,443 @@
 
-/* =========================
-   BASIC PAGE STYLING
-   ========================= */
+/* =========================================================
+   MY BUDGET TRACKER - VISUAL DESIGN
+   ========================================================= */
 
-/* Element Selector */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-}
-
-/* Element Selector */
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Element Selector */
-h1 {
-    color: #2563eb;
-    font-size: 32px;
-}
-
-/* Descendant Selector */
-header p {
-    color: #666;
-}
+/* Google Fonts
+   Heading font: Poppins
+   Body font: Open Sans
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 
 
-/* =========================
-   ADD EXPENSE SECTION
-   ========================= */
+/* =========================================================
+   1. GENERAL PAGE STYLING
+   ========================================================= */
 
-/* Class Selector */
-.add-expense {
-    background-color: white;
-    padding: 25px;
-    margin: 0 auto 20px;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* ID Selector */
-#expenses {
-    background-color: #e8f1ff;
-    padding: 25px;
-    margin: 0 auto 20px;
-    max-width: 600px;
-    border-radius: 10px;
-}
-
-
-/* Element Selector */
-h2 {
-    margin-bottom: 20px;
-    color: #1e3a8a;
-}
-
-
-/* Element Selector */
-label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-
-/* Element Selector */
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+/* Apply box-sizing to all elements */
+* {
     box-sizing: border-box;
 }
 
+/* Page background and body typography */
+body {
+    margin: 0;
+    padding: 30px 20px;
 
-/* Advanced Selector 1:
-   Negation pseudo-class */
-input:not([type="submit"]) {
-    background-color: #fafafa;
+    background-color: #f3f7f4;
+    color: #1f2937;
+
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
 }
 
 
-/* Advanced Selector 2:
-   Focus pseudo-class */
+/* =========================================================
+   2. PAGE HEADING CARD
+   ========================================================= */
+
+/* Header is styled as a distinct visual card */
+header {
+    max-width: 700px;
+    margin: 0 auto 30px;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d1e7d8;
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
+}
+
+/* Budget Tracker icon */
+header img {
+    margin-bottom: 10px;
+}
+
+/* Main heading */
+h1 {
+    margin: 0 0 10px;
+
+    color: #166534;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+/* Header description */
+header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   3. MAIN CONTENT
+   ========================================================= */
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   4. ADD EXPENSE FORM CARD
+   ========================================================= */
+
+/* Form section is a distinct card */
+.add-expense {
+    max-width: 700px;
+    margin: 0 auto 25px;
+
+    padding: 28px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d1e7d8;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
+}
+
+
+/* Section headings */
+h2 {
+    margin: 0 0 22px;
+
+    color: #166534;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/* Form labels */
+label {
+    display: block;
+
+    margin-top: 16px;
+    margin-bottom: 7px;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Form inputs and dropdown */
+input,
+select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background-color: #f8faf9;
+
+    border: 1px solid #cbd5d1;
+    border-radius: 8px;
+
+    color: #1f2937;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
+}
+
+
+/* Placeholder text */
+input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* Input background using the existing advanced selector */
+input:not([type="submit"]) {
+    background-color: #f8faf9;
+}
+
+
+/* Focus effect */
 input:focus,
 select:focus {
     outline: none;
-    border: 2px solid #2563eb;
+
+    background-color: #ffffff;
+
+    border: 2px solid #22c55e;
+
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
 }
 
 
-/* Button styling */
+/* =========================================================
+   5. BUTTON STYLING
+   ========================================================= */
+
 button {
-    margin-top: 20px;
-    padding: 12px 20px;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    margin-top: 22px;
 
-    /* Required */
+    padding: 13px 22px;
+
+    background-color: #166534;
+    color: #ffffff;
+
+    border: 1px solid #166534;
+    border-radius: 8px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
     cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
 
-/* =========================
-   EXPENSE TABLE
-   ========================= */
+/* Button hover effect */
+button:hover {
+    background-color: #14532d;
 
-/* Element Selector */
+    box-shadow: 0 4px 10px rgba(22, 101, 52, 0.2);
+
+    transform: translateY(-1px);
+}
+
+
+/* Button active effect */
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   6. EXPENSE TABLE CARD
+   ========================================================= */
+
+/* Expense table section is a distinct card */
+#expenses {
+    max-width: 700px;
+    margin: 0 auto 25px;
+
+    padding: 28px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d1e7d8;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
+
+    overflow-x: auto;
+}
+
+
+/* Expense table */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+
+    margin-top: 10px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #d1e7d8;
+    border-radius: 8px;
+
+    background-color: #ffffff;
 }
 
 
-/* Element Selector */
+/* Table cells */
 th,
 td {
-    border: 1px solid #ccc;
-    padding: 12px;
+    padding: 13px 14px;
+
+    border-right: 1px solid #d1e7d8;
+    border-bottom: 1px solid #d1e7d8;
+
     text-align: left;
+
+    font-size: 14px;
 }
 
 
-/* Colored header row */
+/* Remove border from last column */
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+
+
+/* Remove bottom border from last row */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Table header */
 th {
-    background-color: #2563eb;
-    color: white;
+    background-color: #166534;
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 
-/* Advanced Selector 3:
-   Position pseudo-class */
+/* Alternating table rows */
 tr:nth-child(even) {
-    background-color: #f2f6fc;
+    background-color: #f0fdf4;
 }
 
 
-/* Advanced Selector 4:
-   Hover pseudo-class */
-tr:hover {
-    background-color: #dbeafe;
+/* Table row hover */
+tbody tr:hover {
+    background-color: #dcfce7;
 }
 
 
-/* Advanced Selector 5:
-   Descendant selector */
+/* Expense table text */
 .expenses-section td {
-    font-size: 15px;
+    color: #374151;
+    font-size: 14px;
 }
 
 
-/* =========================
-   INSTRUCTIONS
-   ========================= */
+/* =========================================================
+   7. INSTRUCTIONS CARD
+   ========================================================= */
 
 .instructions {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto 25px;
+
+    padding: 22px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d1e7d8;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
 }
 
 
+/* Instructions summary */
 summary {
-    font-weight: bold;
+    color: #166534;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
     cursor: pointer;
 }
 
 
-/* =========================
-   MULTIMEDIA
-   ========================= */
+/* Instructions paragraph */
+.instructions p {
+    margin: 15px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   8. MULTIMEDIA CARD
+   ========================================================= */
 
 .multimedia {
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 700px;
+    margin: 0 auto 25px;
+
+    padding: 22px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d1e7d8;
+    border-radius: 14px;
+
     text-align: center;
-    background-color: white;
-    padding: 20px;
+
+    box-shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
+}
+
+
+/* Multimedia heading */
+.multimedia h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Responsive video */
+.multimedia iframe {
+    width: 100%;
+    max-width: 560px;
+
+    border: none;
     border-radius: 10px;
 }
 
 
-.multimedia iframe {
-    max-width: 100%;
+/* =========================================================
+   9. RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    header {
+        padding: 22px 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .add-expense,
+    #expenses,
+    .instructions,
+    .multimedia {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    button {
+        width: 100%;
+    }
 }
 

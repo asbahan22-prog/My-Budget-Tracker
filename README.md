@@ -97,3 +97,43 @@ The Add Expense button is currently for demonstration purposes. JavaScript will 
 ## Conclusion
 
 This project demonstrates my understanding of HTML tables, forms, multimedia elements, interactive HTML elements, and advanced CSS selectors. It builds directly on the Budget Tracker project created in Week 1.
+
+
+
+
+# My Budget Tracker
+
+My Budget Tracker is a simple web application for recording and viewing personal expenses. It was built using HTML5 and CSS3 as part of a web development project.
+
+## Features
+
+* Add Expense form
+* Expense table with categories and dates
+* Consistent color palette
+* Google Fonts for improved typography
+* Styled form inputs and buttons
+* Alternating table rows
+* Card-style sections using the CSS Box Model
+* Responsive layout for smaller screens
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* Google Fonts
+
+## Project Files
+
+* `index.html` – Contains the structure and content of the Budget Tracker.
+* `style.css` – Contains the visual design, colors, typography, form and table styling, and Box Model layout.
+
+## Expense Form Fields
+
+* **Expense Name** – Enter the name or description of the expense, such as Groceries.
+* **Amount** – Enter the amount spent in Kenyan Shillings (KSh).
+* **Category** – Select a category such as Food, Transport, Rent, Entertainment, or Other.
+* **Add Expense Button** – Used to submit the expense information.
+
+## Purpose
+
+The goal of this project is to create a clean, professional, and user-friendly Budget Tracker while demonstrating effective use of CSS styling and the CSS Box Model.
