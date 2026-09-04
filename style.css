@@ -1,0 +1,82 @@
+
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Element Selector */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Element Selector */
+h1 {
+    color: #2563eb;
+    font-size: 32px;
+}
+
+/* Element Selector */
+header p {
+    color: #666;
+}
+
+
+/* Class Selector */
+.add-expense {
+    background-color: white;
+    padding: 25px;
+    margin: 0 auto 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ID Selector */
+#expenses {
+    background-color: #e8f1ff;
+    padding: 25px;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+
+/* Element Selector */
+h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+
+/* Element Selector */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Element Selector */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+/* ID Selector */
+#expenses p {
+    color: #777;
+    font-style: italic;
+}
+
