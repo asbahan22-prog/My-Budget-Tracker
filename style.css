@@ -1,4 +1,8 @@
 
+/* =========================
+   BASIC PAGE STYLING
+   ========================= */
+
 /* Element Selector */
 body {
     font-family: Arial, sans-serif;
@@ -20,11 +24,15 @@ h1 {
     font-size: 32px;
 }
 
-/* Element Selector */
+/* Descendant Selector */
 header p {
     color: #666;
 }
 
+
+/* =========================
+   ADD EXPENSE SECTION
+   ========================= */
 
 /* Class Selector */
 .add-expense {
@@ -41,7 +49,7 @@ header p {
 #expenses {
     background-color: #e8f1ff;
     padding: 25px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     max-width: 600px;
     border-radius: 10px;
 }
@@ -64,7 +72,8 @@ label {
 
 
 /* Element Selector */
-input {
+input,
+select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -74,9 +83,120 @@ input {
 }
 
 
-/* ID Selector */
-#expenses p {
-    color: #777;
-    font-style: italic;
+/* Advanced Selector 1:
+   Negation pseudo-class */
+input:not([type="submit"]) {
+    background-color: #fafafa;
+}
+
+
+/* Advanced Selector 2:
+   Focus pseudo-class */
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #2563eb;
+}
+
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+
+    /* Required */
+    cursor: pointer;
+}
+
+
+/* =========================
+   EXPENSE TABLE
+   ========================= */
+
+/* Element Selector */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+/* Element Selector */
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+
+/* Colored header row */
+th {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+/* Advanced Selector 3:
+   Position pseudo-class */
+tr:nth-child(even) {
+    background-color: #f2f6fc;
+}
+
+
+/* Advanced Selector 4:
+   Hover pseudo-class */
+tr:hover {
+    background-color: #dbeafe;
+}
+
+
+/* Advanced Selector 5:
+   Descendant selector */
+.expenses-section td {
+    font-size: 15px;
+}
+
+
+/* =========================
+   INSTRUCTIONS
+   ========================= */
+
+.instructions {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* =========================
+   MULTIMEDIA
+   ========================= */
+
+.multimedia {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.multimedia iframe {
+    max-width: 100%;
 }
 
