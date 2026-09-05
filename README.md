@@ -1,139 +1,72 @@
-# My Budget Tracker
+# SpendWise Dashboard Shell
 
-## Project Description
+SpendWise is a responsive personal finance dashboard built as part of a CSS layout challenge. The project continues the existing Budget Tracker and focuses on creating a modern dashboard interface using CSS Grid, Flexbox, CSS custom properties, responsive design, and micro-interactions.
 
+## Features
 
-My Budget Tracker is a simple web page designed to help users keep track of their expenses. It was built using HTML and CSS based on the Budget Tracker project from Week 1.
-
-This week's project adds an expense table, an improved expense form, multimedia content, an interactive instructions section, and advanced CSS selectors.
+* Responsive sidebar navigation
+* Dashboard header with user information
+* Financial summary cards
+* Six spending category cards
+* Recent transactions section
+* CSS Grid for the overall dashboard layout
+* Flexbox for the sidebar, header, and dashboard cards
+* CSS custom properties for the theme
+* Responsive single-column layout below 768px
+* Hover and keyboard focus micro-interactions
+* Dark theme using `prefers-color-scheme: dark`
 
 ## Technologies Used
 
 * HTML5
 * CSS3
+* CSS Grid
+* Flexbox
+* CSS Custom Properties
+* Google Fonts
 
-## Project Features
+## Project Files
 
-### 1. Expense Table
+* `index.html` – Contains the structure of the SpendWise dashboard, including the sidebar, header, summary cards, category cards, and recent activity.
+* `style.css` – Contains the visual design, Grid and Flexbox layouts, theme variables, responsive styles, animations, and dark theme.
 
-The project contains an expense table using proper HTML table elements:
+## Dashboard Categories
 
-* `<table>`
-* `<thead>`
-* `<tbody>`
-* `<tr>`
-* `<th>`
-* `<td>`
-
-The table contains four columns:
-
-* Name
-* Amount
-* Category
-* Date
-
-It also includes five sample expense records.
-
-The table is styled with borders, padding, a colored header, alternating row colors, and a hover effect.
-
-### 2. Add Expense Form
-
-The Add Expense section contains a proper `<form>` element.
-
-It includes:
-
-* Expense name input
-* Amount input
-* Category dropdown
-* Add Expense button
-
-The category dropdown contains five options:
+The dashboard includes six financial categories:
 
 * Food
 * Transport
 * Rent
 * Entertainment
-* Other
+* Savings
+* Utilities
 
-Each input has a clear and matching ID so that JavaScript can be added in future lessons.
+## Responsive Design
 
-### 3. Multimedia Content
+The dashboard uses a media query below 768px. On smaller screens, the layout changes to a single-column structure and the category cards stack vertically.
 
-A small budget tracker icon is displayed near the main heading using an `<img>` element.
+The responsive layout can be verified using the browser's DevTools Device Toolbar.
 
-A budgeting tips YouTube video is also embedded on the page using an `<iframe>`.
+## Micro-interactions
 
-### 4. Interactive Elements
+Dashboard category cards include subtle hover and keyboard focus effects using:
 
-The project includes a collapsible "How to use this tracker" section using `<details>` and `<summary>`.
+* `transform`
+* `box-shadow`
+* `transition`
 
-The table rows also have a hover effect, and the Add Expense button uses `cursor: pointer` to display the hand cursor.
+The animations are completed within 200ms.
 
-### 5. Advanced CSS Selectors
+## Dark Theme
 
-The stylesheet demonstrates several advanced CSS selectors, including:
+A dark theme is included as a stretch goal using:
 
-* Descendant selector: `.expenses-section td`
-* Negation pseudo-class: `input:not([type="submit"])`
-* Position pseudo-class: `tr:nth-child(even)`
-* Focus pseudo-class: `input:focus`
-* Hover pseudo-class: `tr:hover`
+```css
+@media (prefers-color-scheme: dark)
+```
 
-These selectors are used to visibly style different elements of the Budget Tracker.
-
-## Project Structure
-
-My-Budget-Tracker/
-│
-├── index.html
-├── style.css
-└── README.md
-
-
-## Future Improvements
-
-The Add Expense button is currently for demonstration purposes. JavaScript will be added in future lessons to allow users to enter expenses dynamically and update the expense table.
-
-## Conclusion
-
-This project demonstrates my understanding of HTML tables, forms, multimedia elements, interactive HTML elements, and advanced CSS selectors. It builds directly on the Budget Tracker project created in Week 1.
-
-
-
-
-# My Budget Tracker
-
-My Budget Tracker is a simple web application for recording and viewing personal expenses. It was built using HTML5 and CSS3 as part of a web development project.
-
-## Features
-
-* Add Expense form
-* Expense table with categories and dates
-* Consistent color palette
-* Google Fonts for improved typography
-* Styled form inputs and buttons
-* Alternating table rows
-* Card-style sections using the CSS Box Model
-* Responsive layout for smaller screens
-
-## Technologies Used
-
-* HTML5
-* CSS3
-* Google Fonts
-
-## Project Files
-
-* `index.html` – Contains the structure and content of the Budget Tracker.
-* `style.css` – Contains the visual design, colors, typography, form and table styling, and Box Model layout.
-
-## Expense Form Fields
-
-* **Expense Name** – Enter the name or description of the expense, such as Groceries.
-* **Amount** – Enter the amount spent in Kenyan Shillings (KSh).
-* **Category** – Select a category such as Food, Transport, Rent, Entertainment, or Other.
-* **Add Expense Button** – Used to submit the expense information.
+The dark theme is created by overriding the CSS custom properties.
 
 ## Purpose
 
-The goal of this project is to create a clean, professional, and user-friendly Budget Tracker while demonstrating effective use of CSS styling and the CSS Box Model.
+The purpose of this project is to demonstrate how modern CSS layout techniques such as Grid and Flexbox can be used to create a clean, responsive dashboard interface without adding JavaScript functionality.
