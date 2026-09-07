@@ -1,785 +1,510 @@
-/* =========================================================
-   SPENDWISE DASHBOARD
-   CSS GRID + FLEXBOX
-   ========================================================= */
-
-
-/* =========================================================
-   1. GOOGLE FONTS
-   ========================================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 
-
-/* =========================================================
-   2. CSS CUSTOM PROPERTIES
-   ========================================================= */
-
 :root {
-    --brand-color: #166534;
-    --accent-color: #22c55e;
-
-    --surface-color: #ffffff;
-    --background-color: #f3f7f4;
-
-    --primary-text: #1f2937;
-    --secondary-text: #64748b;
-
-    --border-color: #d1e7d8;
-
-    --sidebar-color: #ffffff;
-
-    --success-color: #15803d;
-    --danger-color: #dc2626;
-
-    --card-radius: 14px;
-
-    --shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
+--brand-color: #166534;
+--accent-color: #22c55e;
+--surface-color: #ffffff;
+--background-color: #f3f7f4;
+--primary-text: #1f2937;
+--secondary-text: #64748b;
+--border-color: #d1e7d8;
+--sidebar-color: #ffffff;
+--success-color: #15803d;
+--danger-color: #dc2626;
+--card-radius: 14px;
+--shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
 }
-
-
-/* =========================================================
-   3. RESET
-   ========================================================= */
 
 * {
-    box-sizing: border-box;
-}
+  box-sizing: border-box;
+  }
 
 body {
-    margin: 0;
-    background-color: var(--background-color);
-    color: var(--primary-text);
-    font-family: 'Inter', sans-serif;
+margin: 0;
+background-color: var(--background-color);
+color: var(--primary-text);
+font-family: 'Inter', sans-serif;
 }
-
-
-/* =========================================================
-   4. DASHBOARD GRID
-   ========================================================= */
 
 .dashboard {
-    min-height: 100vh;
-
-    /* CSS GRID FOR OVERALL PAGE LAYOUT */
-    display: grid;
-
-    grid-template-columns: 240px 1fr;
+min-height: 100vh;
+display: grid;
+grid-template-columns: 240px 1fr;
 }
-
-
-/* =========================================================
-   5. SIDEBAR
-   ========================================================= */
 
 .sidebar {
-    min-height: 100vh;
-    padding: 25px 18px;
-
-    background-color: var(--sidebar-color);
-    border-right: 1px solid var(--border-color);
-
-    /* FLEXBOX */
-    display: flex;
-    flex-direction: column;
+min-height: 100vh;
+padding: 25px 18px;
+background-color: var(--sidebar-color);
+border-right: 1px solid var(--border-color);
+display: flex;
+flex-direction: column;
 }
-
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    margin-bottom: 35px;
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 35px;
 }
-
 
 .brand-icon {
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #dcfce7;
-    border-radius: 10px;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #dcfce7;
+border-radius: 10px;
 }
-
 
 .brand h1 {
-    margin: 0;
-
-    color: var(--brand-color);
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+margin: 0;
+color: var(--brand-color);
+font-family: 'Poppins', sans-serif;
+font-size: 20px;
 }
-
-
-/* =========================================================
-   6. NAVIGATION
-   ========================================================= */
 
 .navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+display: flex;
+flex-direction: column;
+gap: 8px;
 }
-
 
 .nav-item {
-    padding: 12px 14px;
-
-    color: var(--secondary-text);
-    text-decoration: none;
-
-    border-radius: 9px;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+padding: 12px 14px;
+color: var(--secondary-text);
+text-decoration: none;
+border-radius: 9px;
+font-size: 14px;
+font-weight: 500;
+transition:
+background-color 0.2s ease,
+color 0.2s ease;
 }
-
 
 .nav-item:hover,
 .nav-item.active {
-    background-color: #dcfce7;
-    color: var(--brand-color);
+background-color: #dcfce7;
+color: var(--brand-color);
 }
-
 
 .nav-item:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
+outline: 2px solid var(--accent-color);
+outline-offset: 2px;
 }
-
-
-/* =========================================================
-   7. SIDEBAR FOOTER
-   ========================================================= */
 
 .sidebar-footer {
-    margin-top: auto;
-    padding: 16px;
-
-    background-color: #f0fdf4;
-
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+margin-top: auto;
+padding: 16px;
+background-color: #f0fdf4;
+border: 1px solid var(--border-color);
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+gap: 5px;
 }
-
 
 .sidebar-footer p {
-    margin: 0;
-
-    color: var(--secondary-text);
-    font-size: 12px;
+margin: 0;
+color: var(--secondary-text);
+font-size: 12px;
 }
-
 
 .sidebar-footer strong {
-    color: var(--brand-color);
-    font-size: 16px;
+color: var(--brand-color);
+font-size: 16px;
 }
-
-
-/* =========================================================
-   8. MAIN CONTENT
-   ========================================================= */
 
 .main-content {
-    min-width: 0;
-    padding: 30px;
+min-width: 0;
+padding: 30px;
 }
-
-
-/* =========================================================
-   9. HEADER
-   ========================================================= */
 
 .dashboard-header {
-    margin-bottom: 30px;
-
-    /* FLEXBOX */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+margin-bottom: 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 25px;
 }
-
 
 .welcome h2 {
-    margin: 3px 0 5px;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 28px;
+margin: 3px 0 5px;
+font-family: 'Poppins', sans-serif;
+font-size: 28px;
 }
-
 
 .welcome > p:last-child {
-    margin: 0;
-
-    color: var(--secondary-text);
-    font-size: 14px;
+margin: 0;
+color: var(--secondary-text);
+font-size: 14px;
 }
-
 
 .eyebrow {
-    margin: 0;
-
-    color: var(--brand-color);
-
-    font-size: 12px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+margin: 0;
+color: var(--brand-color);
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.08em;
 }
-
 
 .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+display: flex;
+align-items: center;
+gap: 18px;
 }
-
 
 .notification {
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--surface-color);
-
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: var(--surface-color);
+border: 1px solid var(--border-color);
+border-radius: 50%;
 }
-
 
 .profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 13px;
 }
-
 
 .profile-avatar {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--brand-color);
-    color: white;
-
-    border-radius: 50%;
-
-    font-weight: 700;
+width: 42px;
+height: 42px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: var(--brand-color);
+color: white;
+border-radius: 50%;
+font-weight: 700;
 }
-
-
-.profile {
-    font-size: 13px;
-}
-
 
 .profile strong,
 .profile small {
-    display: block;
+display: block;
 }
-
 
 .profile small {
-    margin-top: 2px;
-    color: var(--secondary-text);
-    font-size: 11px;
+margin-top: 2px;
+color: var(--secondary-text);
+font-size: 11px;
 }
-
-
-/* =========================================================
-   10. SUMMARY CARDS
-   ========================================================= */
 
 .summary-section {
-    margin-bottom: 35px;
+margin-bottom: 35px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
 
-    /* CSS GRID */
-    display: grid;
+.summary-card {
+padding: 20px;
+background-color: var(--surface-color);
+border: 1px solid var(--border-color);
+border-radius: var(--card-radius);
+box-shadow: var(--shadow);
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
 
-    grid-template-columns: repeat(3, 1fr);
+.summary-card span {
+color: var(--secondary-text);
+font-size: 13px;
+}
 
-    gap: 18px;
+.summary-card strong {
+color: var(--primary-text);
+font-family: 'Poppins', sans-serif;
+font-size: 23px;
+}
+
+.summary-card small {
+color: var(--success-color);
+font-size: 12px;
+}
+
+.section-heading {
+margin-bottom: 18px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 15px;
+}
+
+.section-heading h2 {
+margin: 4px 0 0;
+font-family: 'Poppins', sans-serif;
+font-size: 21px;
+}
+
+.month-label {
+padding: 8px 12px;
+background-color: var(--surface-color);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+color: var(--secondary-text);
+font-size: 12px;
+}
+
+.category-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+
+.category-card {
+min-height: 220px;
+padding: 20px;
+background-color: var(--surface-color);
+border: 1px solid var(--border-color);
+border-radius: var(--card-radius);
+box-shadow: var(--shadow);
+display: flex;
+flex-direction: column;
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 18px rgba(22, 101, 52, 0.14);
+}
+
+.category-card:focus {
+outline: 2px solid var(--accent-color);
+outline-offset: 3px;
+transform: translateY(-4px);
+box-shadow: 0 8px 18px rgba(22, 101, 52, 0.14);
+}
+
+.card-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.category-icon {
+width: 42px;
+height: 42px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f0fdf4;
+border-radius: 10px;
+font-size: 20px;
+}
+
+.percentage {
+color: var(--secondary-text);
+font-size: 12px;
+font-weight: 600;
+}
+
+.card-content {
+margin-top: 18px;
+display: flex;
+flex-direction: column;
+}
+
+.card-content h3 {
+margin: 0 0 5px;
+color: var(--primary-text);
+font-family: 'Poppins', sans-serif;
+font-size: 16px;
+}
+
+.card-content strong {
+font-size: 21px;
+}
+
+.card-content p {
+margin: 5px 0 0;
+color: var(--secondary-text);
+font-size: 12px;
+}
+
+.progress {
+height: 6px;
+margin-top: auto;
+background-color: #e2e8e5;
+border-radius: 20px;
+overflow: hidden;
+}
+
+.progress span {
+display: block;
+height: 100%;
+background-color: var(--accent-color);
+border-radius: 20px;
+}
+
+.activity-card {
+margin-top: 35px;
+padding: 24px;
+background-color: var(--surface-color);
+border: 1px solid var(--border-color);
+border-radius: var(--card-radius);
+box-shadow: var(--shadow);
+}
+
+.activity-heading {
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.activity-heading h2 {
+margin: 4px 0 0;
+font-family: 'Poppins', sans-serif;
+font-size: 20px;
+}
+
+.activity-heading a {
+color: var(--brand-color);
+font-size: 13px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.activity-heading a:hover {
+text-decoration: underline;
+}
+
+.activity-list {
+display: flex;
+flex-direction: column;
+}
+
+.activity-item {
+padding: 13px 0;
+border-bottom: 1px solid var(--border-color);
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.activity-item:last-child {
+border-bottom: none;
+}
+
+.activity-icon {
+width: 38px;
+height: 38px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f0fdf4;
+border-radius: 9px;
+}
+
+.activity-info {
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+
+.activity-info strong {
+font-size: 13px;
+}
+
+.activity-info small {
+color: var(--secondary-text);
+font-size: 11px;
+}
+
+.expense {
+color: var(--danger-color);
+font-size: 13px;
+}
+
+@media (max-width: 767px) {
+.dashboard {
+grid-template-columns: 1fr;
 }
 
 
-.summary-card {
-    padding: 20px;
+.sidebar {
+    min-height: auto;
+    padding: 15px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+}
 
-    background-color: var(--surface-color);
+.brand {
+    margin-bottom: 15px;
+}
 
-    border: 1px solid var(--border-color);
-    border-radius: var(--card-radius);
-
-    box-shadow: var(--shadow);
-
-    /* FLEXBOX */
-    display: flex;
-    flex-direction: column;
+.navigation {
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 5px;
 }
 
-
-.summary-card span {
-    color: var(--secondary-text);
-    font-size: 13px;
-}
-
-
-.summary-card strong {
-    color: var(--primary-text);
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 23px;
-}
-
-
-.summary-card small {
-    color: var(--success-color);
+.nav-item {
+    padding: 8px 10px;
     font-size: 12px;
 }
 
+.sidebar-footer {
+    display: none;
+}
 
-/* =========================================================
-   11. SECTION HEADING
-   ========================================================= */
+.main-content {
+    padding: 20px 15px;
+}
 
-.section-heading {
-    margin-bottom: 18px;
+.dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
 
-    display: flex;
-    align-items: center;
+.header-actions {
+    width: 100%;
     justify-content: space-between;
-    gap: 15px;
 }
 
-
-.section-heading h2 {
-    margin: 4px 0 0;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 21px;
+.summary-section {
+    grid-template-columns: 1fr;
 }
-
-
-.month-label {
-    padding: 8px 12px;
-
-    background-color: var(--surface-color);
-
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-
-    color: var(--secondary-text);
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   12. CATEGORY GRID
-   ========================================================= */
 
 .category-grid {
-
-    /* CSS GRID */
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 18px;
+    grid-template-columns: 1fr;
 }
 
-
-/* =========================================================
-   13. CATEGORY CARD
-   ========================================================= */
-
-.category-card {
-    min-height: 220px;
-    padding: 20px;
-
-    background-color: var(--surface-color);
-
-    border: 1px solid var(--border-color);
-    border-radius: var(--card-radius);
-
-    box-shadow: var(--shadow);
-
-    /* FLEXBOX INSIDE CARD */
-    display: flex;
-    flex-direction: column;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-
-/* HOVER MICRO-INTERACTION */
-
-.category-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 8px 18px rgba(22, 101, 52, 0.14);
-}
-
-
-/* KEYBOARD FOCUS MICRO-INTERACTION */
-
-.category-card:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 3px;
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 8px 18px rgba(22, 101, 52, 0.14);
-}
-
-
-/* =========================================================
-   14. CARD CONTENT
-   ========================================================= */
-
-.card-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.category-icon {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #f0fdf4;
-
-    border-radius: 10px;
-
-    font-size: 20px;
-}
-
-
-.percentage {
-    color: var(--secondary-text);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-
-.card-content {
-    margin-top: 18px;
-
-    display: flex;
+.section-heading {
+    align-items: flex-start;
     flex-direction: column;
 }
 
-
-.card-content h3 {
-    margin: 0 0 5px;
-
-    color: var(--primary-text);
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+.month-label {
+    align-self: flex-start;
 }
 
 
-.card-content strong {
-    font-size: 21px;
 }
-
-
-.card-content p {
-    margin: 5px 0 0;
-
-    color: var(--secondary-text);
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   15. PROGRESS BAR
-   ========================================================= */
-
-.progress {
-    height: 6px;
-
-    margin-top: auto;
-
-    background-color: #e2e8e5;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-
-.progress span {
-    display: block;
-
-    height: 100%;
-
-    background-color: var(--accent-color);
-
-    border-radius: 20px;
-}
-
-
-/* =========================================================
-   16. RECENT ACTIVITY
-   ========================================================= */
-
-.activity-card {
-    margin-top: 35px;
-    padding: 24px;
-
-    background-color: var(--surface-color);
-
-    border: 1px solid var(--border-color);
-    border-radius: var(--card-radius);
-
-    box-shadow: var(--shadow);
-}
-
-
-.activity-heading {
-    margin-bottom: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.activity-heading h2 {
-    margin: 4px 0 0;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-}
-
-
-.activity-heading a {
-    color: var(--brand-color);
-
-    font-size: 13px;
-    font-weight: 600;
-
-    text-decoration: none;
-}
-
-
-.activity-heading a:hover {
-    text-decoration: underline;
-}
-
-
-.activity-list {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.activity-item {
-    padding: 13px 0;
-
-    border-bottom: 1px solid var(--border-color);
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-
-.activity-item:last-child {
-    border-bottom: none;
-}
-
-
-.activity-icon {
-    width: 38px;
-    height: 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #f0fdf4;
-
-    border-radius: 9px;
-}
-
-
-.activity-info {
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-.activity-info strong {
-    font-size: 13px;
-}
-
-
-.activity-info small {
-    color: var(--secondary-text);
-    font-size: 11px;
-}
-
-
-.expense {
-    color: var(--danger-color);
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   17. RESPONSIVE DESIGN
-   Below 768px = SINGLE COLUMN
-   ========================================================= */
-
-@media (max-width: 767px) {
-
-    .dashboard {
-
-        /* SINGLE COLUMN LAYOUT */
-        grid-template-columns: 1fr;
-    }
-
-
-    .sidebar {
-        min-height: auto;
-
-        padding: 15px;
-
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-
-    .brand {
-        margin-bottom: 15px;
-    }
-
-
-    .navigation {
-
-        /* FLEXBOX */
-        flex-direction: row;
-
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-
-    .nav-item {
-        padding: 8px 10px;
-        font-size: 12px;
-    }
-
-
-    .sidebar-footer {
-        display: none;
-    }
-
-
-    .main-content {
-        padding: 20px 15px;
-    }
-
-
-    .dashboard-header {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-
-    .header-actions {
-        width: 100%;
-
-        justify-content: space-between;
-    }
-
-
-    .summary-section {
-        grid-template-columns: 1fr;
-    }
-
-
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .section-heading {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-
-    .month-label {
-        align-self: flex-start;
-    }
-}
-
-
-/* =========================================================
-   18. DARK THEME — STRETCH GOAL
-   Only CSS variables are overridden.
-   ========================================================= */
 
 @media (prefers-color-scheme: dark) {
-
-    :root {
-        --brand-color: #4ade80;
-        --accent-color: #22c55e;
-
-        --surface-color: #1e293b;
-        --background-color: #0f172a;
-
-        --primary-text: #f8fafc;
-        --secondary-text: #94a3b8;
-
-        --border-color: #334155;
-
-        --sidebar-color: #111827;
-
-        --success-color: #4ade80;
-        --danger-color: #f87171;
-
-        --shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    }
+:root {
+--brand-color: #4ade80;
+--accent-color: #22c55e;
+--surface-color: #1e293b;
+--background-color: #0f172a;
+--primary-text: #f8fafc;
+--secondary-text: #94a3b8;
+--border-color: #334155;
+--sidebar-color: #111827;
+--success-color: #4ade80;
+--danger-color: #f87171;
+--shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 }
