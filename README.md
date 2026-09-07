@@ -1,72 +1,69 @@
-# SpendWise Dashboard Shell
+# SpendWise Budget Tracker
 
-SpendWise is a responsive personal finance dashboard built as part of a CSS layout challenge. The project continues the existing Budget Tracker and focuses on creating a modern dashboard interface using CSS Grid, Flexbox, CSS custom properties, responsive design, and micro-interactions.
+## Project Description
 
-## Features
+SpendWise is a budget tracking application that helps users manage their budget and expenses. The project uses HTML and CSS for the interface and JavaScript to process budget information, calculate expenses, and determine the remaining balance.
 
-* Responsive sidebar navigation
-* Dashboard header with user information
-* Financial summary cards
-* Six spending category cards
-* Recent transactions section
-* CSS Grid for the overall dashboard layout
-* Flexbox for the sidebar, header, and dashboard cards
-* CSS custom properties for the theme
-* Responsive single-column layout below 768px
-* Hover and keyboard focus micro-interactions
-* Dark theme using `prefers-color-scheme: dark`
+## JavaScript Concepts Implemented
 
-## Technologies Used
+The project demonstrates the following JavaScript concepts:
 
-* HTML5
-* CSS3
-* CSS Grid
-* Flexbox
-* CSS Custom Properties
-* Google Fonts
+* Variables
+* Data types
+* User input
+* Number conversion
+* Arithmetic calculations
+* Functions
+* Console output
+
+## Variables
+
+Variables are used to store important budgeting information such as the user's budget, expenses, and remaining balance.
+
+For example, the application stores the budget and expense values in variables before performing calculations.
+
+## User Input
+
+The application collects information from the user using JavaScript `prompt()`.
+
+The user is asked to enter:
+
+1. Their budget in Kenyan Shillings.
+2. Their total expenses in Kenyan Shillings.
+
+The input is then converted into numbers using `Number()` so that calculations can be performed.
+
+## Budget Calculations
+
+SpendWise calculates the remaining balance by subtracting total expenses from the budget.
+
+**Remaining Balance = Budget - Expenses**
+
+For example:
+
+* Budget: KSh 10,000
+* Expenses: KSh 3,500
+* Remaining Balance: KSh 6,500
+
+## Functions
+
+A reusable `calculateBalance()` function is used to perform the budget calculation.
+
+Functions help organize the JavaScript code and make the calculation reusable with different budget and expense values.
+
+## Displaying Results
+
+The calculated results are displayed in the browser console.
+
+The console displays:
+
+* Budget
+* Expenses
+* Remaining Balance
 
 ## Project Files
 
-* `index.html` – Contains the structure of the SpendWise dashboard, including the sidebar, header, summary cards, category cards, and recent activity.
-* `style.css` – Contains the visual design, Grid and Flexbox layouts, theme variables, responsive styles, animations, and dark theme.
-
-## Dashboard Categories
-
-The dashboard includes six financial categories:
-
-* Food
-* Transport
-* Rent
-* Entertainment
-* Savings
-* Utilities
-
-## Responsive Design
-
-The dashboard uses a media query below 768px. On smaller screens, the layout changes to a single-column structure and the category cards stack vertically.
-
-The responsive layout can be verified using the browser's DevTools Device Toolbar.
-
-## Micro-interactions
-
-Dashboard category cards include subtle hover and keyboard focus effects using:
-
-* `transform`
-* `box-shadow`
-* `transition`
-
-The animations are completed within 200ms.
-
-## Dark Theme
-
-A dark theme is included as a stretch goal using:
-
-```css
-@media (prefers-color-scheme: dark)
-```
-
-The dark theme is created by overriding the CSS custom properties.
-
-## Purpose
-
-The purpose of this project is to demonstrate how modern CSS layout techniques such as Grid and Flexbox can be used to create a clean, responsive dashboard interface without adding JavaScript functionality.
+* `index.html` — Contains the SpendWise webpage structure.
+* `style.css` — Contains the styling and layout.
+* `script.js` — Contains the JavaScript logic.
+* `README.md` — Contains information about the project and JavaScript implementation.
